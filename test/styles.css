@@ -1,0 +1,6 @@
+html,
+.black-bar {
+    background-color: black;
+    height: 10px; /* Высота полоски */
+    width: 100%; /* Ширина полоски */
+}
