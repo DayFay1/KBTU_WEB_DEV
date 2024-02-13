@@ -1,6 +1,98 @@
-html,
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+p {
+    color: #666;
+    text-align: center;
+}
+
+#task-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#task-input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#add-button {
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#task-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#task-list li i {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.top-bar {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.top-bar h1 {
+    margin: 0;
+}
+
 .black-bar {
     background-color: black;
-    height: 10px; /* Высота полоски */
+    height: 100px; /* Высота полоски */
     width: 100%; /* Ширина полоски */
+    display: flex; /* Добавляем flex для центрирования текста */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    padding-left: 40px;
 }
+
+.text {
+    color: white; /* Цвет текста */
+    font-size: 36px; /* Размер шрифта */
+}
+
