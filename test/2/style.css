@@ -1,0 +1,95 @@
+/* Use a custom font from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* Set some basic styles for the body element */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center the main container and give it some padding */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Style the heading element */
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+/* Style the paragraph element */
+p {
+    color: #666;
+    text-align: center;
+}
+
+/* Style the form element */
+#task-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the input element */
+#task-input {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+/* Style the button element */
+#add-button {
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Style the list element */
+#task-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style the list items */
+#task-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* Style the checkbox element */
+#task-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+/* Style the delete icon element */
+#task-list li i {
+    color: #dc3545;
+    cursor: pointer;
+}
+
+.top-bar {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.top-bar h1 {
+    margin: 0;
+}
