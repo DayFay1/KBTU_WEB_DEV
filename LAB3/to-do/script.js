@@ -27,3 +27,28 @@ taskList.addEventListener('click', function(event) {
         taskList.removeChild(listItem);
     }
 });
+
+
+function printNumbers() {
+    let number = 1;
+
+    function printNextNumber() {
+        if (number <= 10) {
+            console.log(number);
+            number++;
+        } else {
+            clearInterval(intervalId);
+        }
+    }
+
+    const intervalId = setInterval(printNextNumber, 1000);
+}
+
+const startButton = document.getElementById('numbers');
+
+startButton.addEventListener('click', printNumbers);
+console.log(number);
+
+
+
+
