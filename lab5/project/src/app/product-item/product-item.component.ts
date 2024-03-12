@@ -14,14 +14,7 @@ export class ProductItemComponent {
   flag : boolean = true;
 
   like(){
-    if(this.flag){
-      this.numberOfLikes++;
-      this.flag = false;
-    }
-    else{
-      this.numberOfLikes--;
-      this.flag = true;
-    }
+    this.numberOfLikes++;
   }
 
   Remove(){
