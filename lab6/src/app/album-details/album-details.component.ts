@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {Album} from "../models";
 import {ActivatedRoute} from "@angular/router";
 import {AlbumsService} from "../albums.service";
-
+import { FormsModule } from '@angular/forms';
 class PostService {
 }
 
@@ -17,7 +17,7 @@ export class AlbumDetailsComponent {
 
   constructor(private route: ActivatedRoute,
               private albumsService: AlbumsService) {
-    this.album = {} as Album;
+    this.album = {} as Album; 
     this.title = '';
   }
 
