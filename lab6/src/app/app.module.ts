@@ -20,7 +20,8 @@ import {FormsModule} from "@angular/forms";
     AlbumsComponent,
     NotFoundComponent,
     AlbumDetailsComponent,
-    AlbumPhotosComponent
+    AlbumPhotosComponent,
+      
   ],
   imports: [
     BrowserModule,
