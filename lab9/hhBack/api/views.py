@@ -9,7 +9,11 @@ from django.views.decorators.csrf import csrf_exempt
 def company_list(request):
     if request.method == 'GET':
         company = Company.objects.all()
-        company_json = [p.to_json() for p in company]
+        # company_json = [p.to_json() for p in company]
+        company_json = []
+        for p in company:
+            company_json.append(p.to_json())
+        
         return JsonResponse(company_json, safe=False)
     if request.method == 'POST':
         data = json.loads(request.body)
