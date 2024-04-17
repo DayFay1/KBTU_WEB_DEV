@@ -28,7 +28,7 @@ def category_detail(request, category_id):
     category_json = [p.to_json() for p in category]
     for category in category_json:
         if(category['id'] == category_id):
-            return JsonResponse(category)
+            return JsonResponse (category)
     return JsonResponse({'Error': 'Category does not exit!!!'})
 
 
