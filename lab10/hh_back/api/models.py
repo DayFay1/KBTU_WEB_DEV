@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
 # Create your models here.
 class Company(models.Model):
     name = models.CharField(max_length=255)
@@ -44,3 +45,25 @@ class Vacancy(models.Model):
             'salary': self.salary,
             'company_id': self.company_id
         }
+def get_next_available_id(model_cls):
+    max_id = model_cls.objects.aggregate(models.Max('id'))['id__max']
+    if max_id is None:
+        return 1 
+    else:
+        all_ids = set(model_cls.objects.values_list('id', flat=True))
+        for i in range(1, max_id + 2):
+            if i not in all_ids:
+                return i
+
+        return max_id + 1  
+@receiver(pre_save, sender=Company)
+def set_company_id(sender, instance, **kwargs):
+    if not instance.id:
+        next_id = get_next_available_id(Company)
+        instance.id = next_id
+
+@receiver(pre_save, sender=Vacancy)
+def set_vacancy_id(sender, instance, **kwargs):
+    if not instance.id:
+        next_id = get_next_available_id(Vacancy)
+        instance.id = next_id
